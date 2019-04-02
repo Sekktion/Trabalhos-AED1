@@ -163,12 +163,14 @@ struct dados{   //Struct dados com o nome e o numero
     int numero; //4 bytes
     char nome[5]; //5 bytes     //Tamanho total da struct: 9 bytes
 };
+typedef struct dados sd;
+
 int manipulaUmPar(int i) //recebe o valor do v[i] da repetição na função manipula_pares()
 {
     i=i/2;
     return i;
 }
-void manipula_pares(struct dados *v, int tamanho)  //recebe o endereço do primero valor de v e o tamanho de v
+void manipula_pares(sd *v, int tamanho)  //recebe o endereço do primero valor de v e o tamanho de v
 {
     int i;
     int *p;
@@ -182,22 +184,21 @@ void manipula_pares(struct dados *v, int tamanho)  //recebe o endereço do prime
 
 int main()
 {
-    typedef struct dados sd;
     int i, n;
     sd *p;
     printf("Insira a quantidade de Estruturas 'Dados' desejada: ");
     scanf("%d", &n);
-    p = (sd*) calloc(n,sizeof(sd));
+    p = (sd*) malloc(n*sizeof(sd));
     for(i=0;i<n;i++) //escaneia entrada do teclado para o vetor
     {
         printf("Insira o %do dos %d numeros de sua preferencia: ",i+1,n);
         setbuf(stdin,NULL);
-        scanf("%d",p[i].numero);
+        scanf("%d", &p[i].numero);
         printf("digite o %do dos %d nomes: ",i+1,n);
         setbuf(stdin,NULL);
         gets(p[i].nome);
-        printf("%d\n",p[i].numero);
-        printf("%s\n",p[i].nome);
+        printf("%d\n", p[i].numero);
+        printf("%s\n", p[i].nome);
     }
     manipula_pares(p, n);
     for(i=0;i<n;i++) //printa o vetor final
