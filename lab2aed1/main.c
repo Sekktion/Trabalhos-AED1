@@ -8,25 +8,22 @@ struct dados{   //Struct dados com o nome e o numero
     int numero; //4 bytes
     char nome[5]; //5 bytes     //Tamanho total da struct: 9 bytes
 };
-
-int manipulaUmPar(int i) //recebe o valor do v[i] da repetição na função manipula_pares()
+int manipulaUmPar(int i) //recebe o valor do v[i] da repetiÃ§Ã£o na funÃ§Ã£o manipula_pares()
 {
     if(i%2==0) //teste simples de paridade
         i=i/2;
     return i;
 }
-
-void manipula_pares(struct dados *v, int tamanho)  //recebe o endereço do primero valor de v e o tamanho de v
+void manipula_pares(struct dados *v, int tamanho)  //recebe o endereÃ§o do primero valor de v e o tamanho de v
 {
     int i;
     int *p;
     for(i=0;i<tamanho;i++){
         setbuf(stdin,NULL);
-        v[i].numero = manipulaUmPar(v[i].numero);  //chama a função manipulaUmPar() em loop para testar todos os valores de v individualmente
+        v[i].numero = manipulaUmPar(v[i].numero);  //chama a funÃ§Ã£o manipulaUmPar() em loop para testar todos os valores de v individualmente
     }
     return 0;
 }
-
 int main()
 {
     int i;
@@ -55,25 +52,22 @@ struct dados{   //Struct dados com o nome e o numero
     int numero; //4 bytes
     char nome[5]; //5 bytes     //Tamanho total da struct: 9 bytes
 };
-
-int manipulaUmPar(int i) //recebe o valor do v[i] da repetição na função manipula_pares()
+int manipulaUmPar(int i) //recebe o valor do v[i] da repetiÃ§Ã£o na funÃ§Ã£o manipula_pares()
 {
     i=i/2;
     return i;
 }
-
-void manipula_pares(struct dados *v, int tamanho)  //recebe o endereço do primero valor de v e o tamanho de v
+void manipula_pares(struct dados *v, int tamanho)  //recebe o endereÃ§o do primero valor de v e o tamanho de v
 {
     int i;
     int *p;
     for(i=0;i<tamanho;i++){
         setbuf(stdin,NULL);
         if(v[i].numero%2==0){ //teste simples de paridade
-            v[i].numero = manipulaUmPar(v[i].numero);}  //chama a função manipulaUmPar() em loop para testar todos os valores de v individualmente
+            v[i].numero = manipulaUmPar(v[i].numero);}  //chama a funÃ§Ã£o manipulaUmPar() em loop para testar todos os valores de v individualmente
     }
     return 0;
 }
-
 int main()
 {
     int i;
@@ -102,35 +96,31 @@ int main()
     int num=5;
     float real = 4.9;
     unsigned int end_real, end_num;
-    end_real=&real; //variaveis recebem o valor do endereço de num e real
+    end_real=&real; //variaveis recebem o valor do endereÃ§o de num e real
     end_num=&num;
-
-    //1º Bloco
+    //1Âº Bloco
     printf("Valor de num: %d\n", num);
-    printf("Endereço de num em Hex: %p\n",&num);
-    printf("Endereço de num em Hex: %p\n", end_num);
+    printf("EndereÃ§o de num em Hex: %p\n",&num);
+    printf("EndereÃ§o de num em Hex: %p\n", end_num);
     printf("Valor de end_num em Hex: %p\n", end_num);
     printf("Valor de real: %f\n", real);
-    printf("Endereço de real em Hex: %p\n",&real);
-    printf("Endereço de real em Hex: %p\n", end_real);
+    printf("EndereÃ§o de real em Hex: %p\n",&real);
+    printf("EndereÃ§o de real em Hex: %p\n", end_real);
     printf("Valor de end_real em Hex: %p\n", end_real);
-
-    //2º Bloco
+    //2Âº Bloco
     printf("Insira o novo valor de num: ");
     scanf("%d",end_num);
     printf("Insira o novo valor de real: ");
     scanf("%f",end_real);
-
-    //3º Bloco
+    //3Âº Bloco
     printf("Valor de num: %d\n", num);
-    printf("Endereço de num em Hex: %p\n",&num);
-    printf("Endereço de num em Hex: %p\n", end_num);
+    printf("EndereÃ§o de num em Hex: %p\n",&num);
+    printf("EndereÃ§o de num em Hex: %p\n", end_num);
     printf("Valor de end_num em Hex: %p\n", end_num);
     printf("Valor de real: %f\n", real);
-    printf("Endereço de real em Hex: %p\n",&real);
-    printf("Endereço de real em Hex: %p\n", end_real);
+    printf("EndereÃ§o de real em Hex: %p\n",&real);
+    printf("EndereÃ§o de real em Hex: %p\n", end_real);
     printf("Valor de end_real em Hex: %p\n", end_real);
-
     return 0;
 }*/
 
@@ -142,34 +132,77 @@ int main()
     float real = 4.9,*end_real;
     end_real=&real;
     end_num=&num;
-
-    //1º Bloco
+    //1Âº Bloco
     printf("Valor de num: %d\n", *end_num);
-    printf("Endereço de num em Hex: %p\n", &num);
-    printf("Endereço de num em Hex: %p\n", end_num);
+    printf("EndereÃ§o de num em Hex: %p\n", &num);
+    printf("EndereÃ§o de num em Hex: %p\n", end_num);
     printf("Valor de end_num em Hex: %p\n", end_num);
     printf("Valor de real: %f\n", *end_real);
-    printf("Endereço de real em Hex: %p\n", &real);
-    printf("Endereço de real em Hex: %p\n", end_real);
+    printf("EndereÃ§o de real em Hex: %p\n", &real);
+    printf("EndereÃ§o de real em Hex: %p\n", end_real);
     printf("Valor de end_real em Hex: %p\n", end_real);
-
-    //2º Bloco
+    //2Âº Bloco
     printf("Insira o novo valor de num: ");
     scanf("%d", end_num);
     printf("Insira o novo valor de real: ");
     scanf("%f", end_real);
-
-    //3º Bloco
+    //3Âº Bloco
     printf("Valor de num: %d\n", *end_num);
-    printf("Endereço de num em Hex: %p\n",&num);
-    printf("Endereço de num em Hex: %p\n", end_num);
+    printf("EndereÃ§o de num em Hex: %p\n",&num);
+    printf("EndereÃ§o de num em Hex: %p\n", end_num);
     printf("Valor de end_num em Hex: %p\n", end_num);
     printf("Valor de real: %f\n", *end_real);
-    printf("Endereço de real em Hex: %p\n",&real);
-    printf("Endereço de real em Hex: %p\n", end_real);
+    printf("EndereÃ§o de real em Hex: %p\n",&real);
+    printf("EndereÃ§o de real em Hex: %p\n", end_real);
     printf("Valor de end_real em Hex: %p\n", end_real);
-
     return 0;
 }*/
 
-//Exercicio 5 Lab 2
+//Exercicio 5 Lab 2 INCOMPLETO
+struct dados{   //Struct dados com o nome e o numero
+    int numero; //4 bytes
+    char nome[5]; //5 bytes     //Tamanho total da struct: 9 bytes
+};
+int manipulaUmPar(int i) //recebe o valor do v[i] da repetiÃ§Ã£o na funÃ§Ã£o manipula_pares()
+{
+    i=i/2;
+    return i;
+}
+void manipula_pares(struct dados *v, int tamanho)  //recebe o endereÃ§o do primero valor de v e o tamanho de v
+{
+    int i;
+    int *p;
+    for(i=0;i<tamanho;i++){
+        setbuf(stdin,NULL);
+        if(v[i].numero%2==0){ //teste simples de paridade
+            v[i].numero = manipulaUmPar(v[i].numero);}  //chama a funÃ§Ã£o manipulaUmPar() em loop para testar todos os valores de v individualmente
+    }
+    return 0;
+}
+
+int main()
+{
+    typedef struct dados sd;
+    int i, n;
+    sd *p;
+    printf("Insira a quantidade de Estruturas 'Dados' desejada: ");
+    scanf("%d", &n);
+    p = (sd*) calloc(n,sizeof(sd));
+    for(i=0;i<n;i++) //escaneia entrada do teclado para o vetor
+    {
+        printf("Insira o %do dos %d numeros de sua preferencia: ",i+1,n);
+        setbuf(stdin,NULL);
+        scanf("%d",p[i].numero);
+        printf("digite o %do dos %d nomes: ",i+1,n);
+        setbuf(stdin,NULL);
+        gets(p[i].nome);
+        printf("%d\n",p[i].numero);
+        printf("%s\n",p[i].nome);
+    }
+    manipula_pares(p, n);
+    for(i=0;i<n;i++) //printa o vetor final
+    {
+        printf("%do numero: %d\n",i+1, p[i].numero);
+    }
+    return 0;
+}
