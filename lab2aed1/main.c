@@ -165,10 +165,10 @@ struct dados{   //Struct dados com o nome e o numero
 };
 typedef struct dados sd;
 
-int manipulaUmPar(int i) //recebe o valor do v[i] da repetição na função manipula_pares()
+void manipulaUmPar(sd *v, int tamanho, int i) //recebe o valor do v[i] da repetição na função manipula_pares()
 {
-    i=i/2;
-    return i;
+    v[i].numero=v[i].numero/2;
+    return;
 }
 void manipula_pares(sd *v, int tamanho)  //recebe o endereço do primero valor de v e o tamanho de v
 {
@@ -177,7 +177,7 @@ void manipula_pares(sd *v, int tamanho)  //recebe o endereço do primero valor d
     for(i=0;i<tamanho;i++){
         setbuf(stdin,NULL);
         if(v[i].numero%2==0){ //teste simples de paridade
-            v[i].numero = manipulaUmPar(v[i].numero);}  //chama a função manipulaUmPar() em loop para testar todos os valores de v individualmente
+            manipulaUmPar(v, tamanho, i);}  //chama a função manipulaUmPar() em loop para testar todos os valores de v individualmente
     }
     return 0;
 }
