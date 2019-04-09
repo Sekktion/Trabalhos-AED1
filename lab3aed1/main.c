@@ -60,7 +60,7 @@ typedef struct dados sd;
 void define_struct(sd** v,int n){
     int i;
     for(i=0;i<n;i++){
-        v[i] = (sd *) malloc(n*sizeof(sd));
+        v[i] = (sd *) malloc(sizeof(sd));
     }
 
     for(i=0;i<n;i++){
