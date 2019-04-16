@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1555443170 source:c:\users\viniciusmeres1\desktop\lab2aed1\lab4aed1\usuario.c
+	<stdio.h>
+	<stdlib.h>
+	"racional.h"
+
+1555442245 c:\users\viniciusmeres1\desktop\lab2aed1\lab4aed1\racional.h
+
+1555442872 source:c:\users\viniciusmeres1\desktop\lab2aed1\lab4aed1\racional.c
+	<stdio.h>
+	<stdlib.h>
+	"racional.h"
+
