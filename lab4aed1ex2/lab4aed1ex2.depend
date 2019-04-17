@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1555463143 source:c:\users\vinib\onedrive\햞ea de trabalho\tudo\facul\arquivos da facul\aed1\lab4aed1ex2\usuario.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+	"OutrasFuncs.h"
+
+1555459932 c:\users\vinib\onedrive\햞ea de trabalho\tudo\facul\arquivos da facul\aed1\lab4aed1ex2\lista.h
+
+1555459692 c:\users\vinib\onedrive\햞ea de trabalho\tudo\facul\arquivos da facul\aed1\lab4aed1ex2\outrasfuncs.h
+
+1555460082 source:c:\users\vinib\onedrive\햞ea de trabalho\tudo\facul\arquivos da facul\aed1\lab4aed1ex2\outrasfuncs.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	"lista.h"
+	"OutrasFuncs.h"
+
+1555462306 source:c:\users\vinib\onedrive\햞ea de trabalho\tudo\facul\arquivos da facul\aed1\lab4aed1ex2\lista.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	"lista.h"
+	"OutrasFuncs.h"
+
