@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1559761770 source:c:\users\viniciusmeres1\desktop\testesdeaed1meres\testepilha\user.c
+	<stdio.h>
+	<stdlib.h>
+	"pilha.h"
+
+1559761707 c:\users\viniciusmeres1\desktop\testesdeaed1meres\testepilha\pilha.h
+
+1559761662 source:c:\users\viniciusmeres1\desktop\testesdeaed1meres\testepilha\pilha.c
+	<stdio.h>
+	<stdlib.h>
+	"pilha.h"
+
